@@ -1,4 +1,4 @@
-# The Psychology of CRO: Turning Friction into Flow
+
 
 Conversion Rate Optimization (CRO) is often misunderstood as simply "A/B testing button colors." In reality, true CRO is the systematic application of behavioral psychology, qualitative research, and heuristic analysis to remove cognitive friction.
 

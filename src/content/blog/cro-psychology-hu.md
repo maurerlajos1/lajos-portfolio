@@ -1,4 +1,4 @@
-# A CRO Pszichológiája: Súrlódások Megszüntetése
+
 
 A CRO (Conversion Rate Optimization – Konverzióoptimalizálás) koncepcióját nagyon sokan félreértik, és pusztán „gombok színének A/B tesztelésére” (két különböző verzió összehasonlító tesztelése) egyszerűsítik le. A valóságban az igazi CRO a viselkedéspszichológia, a kvalitatív kutatás és a heurisztikus (tapasztalati úton történő) elemzés szisztematikus alkalmazása annak érdekében, hogy minden kognitív súrlódást megszüntessünk a folyamat során.
 
