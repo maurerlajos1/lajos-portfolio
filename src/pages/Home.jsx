@@ -4,6 +4,7 @@ import ForecasterTool from '../ForecasterTool';
 import { Globe, ShieldCheck, TrendingUp, BrainCircuit, Activity, AlertTriangle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -20,6 +21,7 @@ export default function Home() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={{ duration: 0.4 }}>
+      <SEO title={t('navHome') || 'Home'} description={t('heroSubtitle')} />
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 pb-10">
         
         {/* Hero Section */}

@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../i18n';
 import { motion } from 'framer-motion';
 import { Printer, Mail, MapPin, Globe, Phone, ExternalLink, Download } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Resume() {
   const { t, lang } = useLanguage();
@@ -33,6 +34,7 @@ export default function Resume() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="resume-container pb-24">
+      <SEO title={t('navResume') || 'Resume'} description={t('resumePositioning')} url="https://maurerlajos.com/resume" />
       {/* Action Buttons (Hidden on Print) */}
       <div className="max-w-[850px] mx-auto px-5 pt-8 print:hidden flex justify-end gap-4">
         <button 

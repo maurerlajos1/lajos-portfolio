@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maurerlajos.com/sitemap.xml

@@ -7,6 +7,7 @@ import mermaid from 'mermaid';
 import { getBlogPostById } from '../data/blogPosts';
 import { useLanguage } from '../i18n';
 import { Calendar, Tag, ArrowLeft } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Mermaid = ({ chart }) => {
   const containerRef = React.useRef(null);
@@ -35,7 +36,6 @@ export default function BlogPost() {
 
   useEffect(() => {
     if (post) {
-      document.title = `${post[lang]?.title} | Lajos Maurer Blog`;
       window.scrollTo(0, 0);
     }
   }, [post, lang]);
@@ -60,6 +60,14 @@ export default function BlogPost() {
       transition={{ duration: 0.5 }}
       className="max-w-4xl mx-auto px-6 py-12"
     >
+      <SEO 
+        title={post[lang]?.title} 
+        description={post[lang]?.excerpt || post.category} 
+        image={`https://maurerlajos.com${post.image || '/profile_pic.jpeg'}`}
+        url={`https://maurerlajos.com/blog/${id}`}
+        type="article"
+      />
+      
       <Link to="/blog" className="inline-flex items-center text-gray-400 hover:text-accent transition-colors mb-8 font-medium">
         <ArrowLeft size={16} className="mr-2" /> Back to Articles
       </Link>

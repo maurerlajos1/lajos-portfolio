@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
 import { Calendar, ArrowRight, Tag } from 'lucide-react';
 import { useLanguage } from '../i18n';
+import SEO from '../components/SEO';
 
 export default function Blog() {
   const { t, lang } = useLanguage();
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
+      <SEO title={t('navBlog') || 'Blog'} description={t('blogHeaderSubtitle')} url="https://maurerlajos.com/blog" />
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

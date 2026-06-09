@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, Users, BarChart, ArrowRight, Activity } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function CaseStudies() {
   const { t } = useLanguage();
@@ -15,6 +16,7 @@ export default function CaseStudies() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={{ duration: 0.4 }}>
+      <SEO title={t('navWork') || 'Case Studies'} description={t('caseStudiesSub')} url="https://maurerlajos.com/work" />
       <div className="max-w-[1200px] mx-auto px-5 py-16 pb-24">
         
         <header className="mb-16 text-center">

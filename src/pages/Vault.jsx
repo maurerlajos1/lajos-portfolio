@@ -21,6 +21,7 @@ import {
   ChevronUp 
 } from 'lucide-react';
 import vaultData from '../data/vaultData.json';
+import SEO from '../components/SEO';
 
 // Categorize utility based on keywords in subcategory & description
 const getHighLevelCategory = (item) => {
@@ -170,6 +171,7 @@ export default function Vault() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={{ duration: 0.4 }}>
+      <SEO title={t('navVault') || 'The Vault'} description={t('vaultPageSub')} url="https://maurerlajos.com/vault" />
       <div className="max-w-[1200px] mx-auto px-5 py-16 pb-24">
         {/* Header */}
         <header className="mb-12 text-center">

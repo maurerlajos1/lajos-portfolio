@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n';
 import { motion } from 'framer-motion';
 import { BookOpen, Briefcase, GraduationCap, Layout, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function About() {
   const { t } = useLanguage();
@@ -22,6 +23,7 @@ export default function About() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={{ duration: 0.4 }}>
+      <SEO title={t('navAbout') || 'About Me'} description={t('aboutSub')} url="https://maurerlajos.com/about" />
       <div className="max-w-[1200px] mx-auto px-5 py-16 pb-24">
         
         <header className="mb-16 text-center">
