@@ -53,19 +53,19 @@ const pages = [
     route: '/blog/cro-psychology',
     title: 'The Psychology of CRO: Turning Friction into Flow | Lajos Maurer',
     description: 'Conversion Rate Optimization is not just about A/B testing button colors. It is the systematic application of behavioral psychology.',
-    image: 'https://maurerlajos.com/profile_pic.jpeg'
+    image: 'https://maurerlajos.com/images/blog/cro_psychology.png'
   },
   {
     route: '/blog/google-ads-funnel',
     title: 'Stop Bleeding Budget: How to Force Google Ads to Find Buyers | Lajos Maurer',
     description: 'Modern Google Ads is an ecosystem driven by machine learning. Learn how to stop buying traffic and start buying revenue.',
-    image: 'https://maurerlajos.com/profile_pic.jpeg'
+    image: 'https://maurerlajos.com/images/blog/google_ads_funnel.png'
   },
   {
     route: '/blog/server-side-tracking',
     title: 'Why Server-Side Tracking is No Longer Optional in 2026 | Lajos Maurer',
     description: 'If you are still relying entirely on client-side pixels, you are bleeding data. Discover why server-side tracking is essential.',
-    image: 'https://maurerlajos.com/profile_pic.jpeg'
+    image: 'https://maurerlajos.com/images/blog/server_side_tracking.png'
   }
 ];
 
