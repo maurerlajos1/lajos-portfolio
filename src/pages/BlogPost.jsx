@@ -102,8 +102,8 @@ export default function BlogPost() {
           components={{
             table({node, ...props}) {
               return (
-                <div className="overflow-x-auto w-full my-8 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-                  <table className="min-w-full text-sm md:text-base" {...props} />
+                <div className="w-full my-8">
+                  <table className="table-fixed w-full text-xs sm:text-sm md:text-base break-words" {...props} />
                 </div>
               );
             },
