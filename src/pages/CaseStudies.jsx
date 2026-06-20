@@ -2,11 +2,12 @@ import React from 'react';
 import { useLanguage } from '../i18n';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Target, Users, BarChart, ArrowRight, Activity } from 'lucide-react';
+import { Target, Users, BarChart, ArrowRight, Activity, CheckCircle2, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO';
+import { caseStudiesData } from '../data/caseStudiesData';
 
 export default function CaseStudies() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const pageVariants = {
     initial: { opacity: 0, y: 20 },
@@ -47,6 +48,51 @@ export default function CaseStudies() {
             <Users size={32} className="text-purple-500 mx-auto mb-4" />
             <h4 className="mb-2 text-gray-400 text-base uppercase tracking-widest">{t('caseMetricProjects') || 'Projects'}</h4>
             <p className="text-3xl font-bold">{t('caseMetricProjectsVal') || '70+ Completed'}</p>
+          </div>
+        </div>
+
+        {/* Highlighted Strategic Projects */}
+        <div className="mb-20">
+          <h2 className="text-3xl mb-8 border-b border-white/10 pb-4">{t('navWork') === 'Esettanulmányok' ? 'Kiemelt Projektek' : 'Highlighted Projects'}</h2>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,350px),1fr))] gap-8">
+            {caseStudiesData.map((study) => {
+              const content = study[lang];
+              return (
+                <div key={study.id} className="glass-panel overflow-hidden group hover:border-accent/50 transition-colors">
+                  <div className="h-48 overflow-hidden relative border-b border-white/10">
+                    <img 
+                      src={study.image} 
+                      alt={content.title} 
+                      className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-accent border border-white/10">
+                      {study.category}
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl mb-2 group-hover:text-accent transition-colors">{content.title}</h3>
+                    <p className="text-sm text-gray-400 mb-6 font-mono">{content.subtitle}</p>
+                    <p className="text-gray-300 leading-relaxed mb-6">
+                      {content.description}
+                    </p>
+                    <div className="flex flex-wrap gap-3 mb-6">
+                      {content.metrics.map((metric, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm bg-accent/10 text-accent px-3 py-1.5 rounded-md border border-accent/20">
+                          <CheckCircle2 size={14} />
+                          <span className="font-bold">{metric}</span>
+                        </div>
+                      ))}
+                    </div>
+                    {study.link && (
+                      <a href={study.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider mt-auto">
+                        {lang === 'hu' ? 'Google Drive Dokumentáció' : 'View Drive Documentation'}
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
