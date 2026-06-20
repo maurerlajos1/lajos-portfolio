@@ -217,8 +217,8 @@ const translations = {
     
     // Hero - UVP
     heroPreTitle: "Szisztematikus Növekedés",
-    heroTitle: "A forgalom olcsó. A vásárlási szándék drága. Olyan mérési és pszichológiai rendszereket építek, amik a céltalan kattintókból fizető vásárlókat csinálnak.",
-    heroSubtitle: "A marketing büdzsék nagyrésze vakrepülésre megy el. Engem nem érdekelnek a lájk-hegyek és a hiúsági metrikák. Ami érdekel: golyóálló szerver-oldali mérések, tiszta attribúció, és azok a pszichológiai triggerek, amiktől az emberek tényleg előveszik a bankkártyájukat.\n\nNincs fekete doboz. Nincs vakmerő tippelgetés.",
+    heroTitle: "A forgalom olcsó. A vásárlási szándék (intent) drága. Olyan mérési és pszichológiai rendszereket építek, amik a céltalan kattintókból fizető vásárlókat konvertálnak.",
+    heroSubtitle: "A marketing büdzsék nagy része vakrepülésre megy el. Engem nem érdekelnek a lájk-hegyek és a hiúsági metrikák (vanity metrics). Ami érdekel: golyóálló szerver-oldali (server-side) mérések, tiszta attribúció, és azok a pszichológiai triggerek, amiktől az emberek tényleg előveszik a bankkártyájukat.\n\nNincs ügynökségi fekete doboz. Nincs vakmerő tippelgetés.",
     heroCtaVault: "Vidd a Stratégiáim",
     secondaryCta: "Növekedés Előrejelző",
 
@@ -229,14 +229,14 @@ const translations = {
 
     // Problem & Focus
     problemTitle: "A cégek égetik a pénzt. Ünneplik a 'megtekintéseket', miközben sorra veszítik el a vevőket a kasszánál.",
-    problemText: "A klasszikus ügynökségi modell halott. Olcsó kattintásokat adnak el neked, és hangzatos 'márkaismertségi' riportokat küldenek, miközben az akvizíciós költségeid az egekben vannak.\n\nÉn klinikusan közelítek a növekedéshez. Amit nem tudunk hajszálpontosan mérni, azt nem is skálázzuk. Először mindig a lyukas tölcsért foltozzuk be: rendbetesszük az adathigiéniát, feltérképezzük a valódi motivációkat, és addig tekerjük a matekot, amíg pozitív nem lesz a megtérülés.",
+    problemText: "A klasszikus ügynökségi modell halott. Olcsó kattintásokat adnak el neked, és hangzatos márkaismertségi (brand awareness) riportokat küldenek, miközben az akvizíciós költségeid (CAC) az egekben vannak.\n\nÉn klinikusan közelítek a növekedéshez. Amit nem tudunk hajszálpontosan mérni, azt nem is skálázzuk. Először mindig a lyukas értékesítési tölcsért (funnel) foltozzuk be: rendbe tesszük az adathigiéniát, feltérképezzük a valódi motivációkat, és addig tekerjük a matekot, amíg a megtérülés (ROAS) egyértelműen pozitív nem lesz.",
 
     // Core Principles
     solutionTitle: "Hagyd abba a találgatást. Kezdj el mérni.",
     meth1Title: "1. A Pszichológia (UX & CRO)",
-    meth1Desc: "Látom, hol akadnak meg a látogatóid, hol hagyják ott a kosarat, és pontosan miért kattintanak el. Aztán addig írom át a szövegeket és faragom újra az oldalt, amíg végig nem mennek a folyamaton. A felhasználói súrlódás a bevétel legnagyobb ellensége.",
+    meth1Desc: "Látom, hol akadnak el a látogatóid, hol hagyják el a kosarat (cart abandonment), és pontosan miért kattintanak el. Aztán addig írom át a szövegeket (copywriting) és faragom újra az oldalt, amíg végig nem mennek a folyamaton. A felhasználói súrlódás (friction) a bevétel legnagyobb ellensége.",
     meth2Title: "2. A Matematika (Attribúció)",
-    meth2Desc: "A hagyományos pixelek haldoklanak. Server-side (szerver-oldali) méréseket építek, hogy az algoritmusok tényleges vásárlókat találjanak, ne csak nézelődőket. Minden elköltött hirdetési forintot feketén-fehéren az üzleti bevételhez kötök.",
+    meth2Desc: "A hagyományos pixelek haldoklanak. Server-side (szerver-oldali) méréseket építek, hogy az algoritmusok tényleges vásárlókat találjanak, ne csak nézelődőket. Minden elköltött hirdetési forintot feketén-fehéren az üzleti bevételhez (revenue) kötök.",
 
     // Interactive Tool (Reciprocity/Proof)
     toolSectionTitle: "Ne higgy nekem. Játssz a matekkal.",
@@ -246,7 +246,7 @@ const translations = {
     
     // Philosophy / Anxiety Reduction
     anxietyTitle: "A Hitvallásom",
-    anxietyText: "A teljesítménymarketing számomra egy matematikai rendszer. A 'megérzéseket' adatokkal zúzom szét, a kampányokat pedig úgy építem fel, hogy kristálytiszta legyen, miből lesz a bevétel. Nincsenek ügynökségi fekete dobozok, és nincs tippelgetés.",
+    anxietyText: "A teljesítménymarketing (performance marketing) számomra egy matematikai rendszer. A 'megérzéseket' adatokkal zúzom szét, a kampányokat pedig úgy építem fel, hogy kristálytiszta legyen, miből lesz a bevétel. Nincsenek ügynökségi fekete dobozok, és nincs tippelgetés.",
     
     // Home Loop
     homeLoopTitle: "Nem csak elköltöttem a büdzsét. Minden egyes forintját lekövettem.",

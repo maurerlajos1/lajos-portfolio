@@ -66,7 +66,7 @@ export default function Resume() {
             </h2>
             
             <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span className="flex items-center gap-1.5"><MapPin size={16} /> Hatvan, Hungary</span>
+              <span className="flex items-center gap-1.5"><MapPin size={16} /> Hungary</span>
               <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
                 <Phone size={16} /> <a href="tel:+36302685650" className="no-underline text-inherit">+36 30 268 5650</a>
               </span>

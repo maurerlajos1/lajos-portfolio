@@ -5,7 +5,7 @@ import { useLanguage } from '../i18n';
 export default function Footer() {
   const { t } = useLanguage();
   return (
-    <footer className="glass-panel flex flex-col gap-8 border-t border-white/10 mt-20 mb-10">
+    <footer className="glass-panel flex flex-col gap-8 border-t border-white/10 mt-20 mb-10 print:hidden">
       <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))] gap-8">
         <div>
           <div className="flex items-center gap-4 mb-4">
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-3 text-gray-400">
             <MapPin size={18} className="text-accent" />
-            <span>Hatvan, Hungary</span>
+            <span>Hungary</span>
           </div>
         </div>
 
