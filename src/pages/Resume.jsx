@@ -117,9 +117,9 @@ export default function Resume() {
           <section className="mb-10">
             <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeTechTitle')}</h3>
             <ul className="text-gray-300 print:text-gray-800 list-disc list-inside space-y-2 text-sm">
-              <li><span className="font-semibold text-gray-200 print:text-black">Analytics & Tracking:</span> GA4, Google Tag Manager, Server-side & Client-side GTM, Looker Studio, Power BI, Conversion Tracking</li>
-              <li><span className="font-semibold text-gray-200 print:text-black">Platforms & Software:</span> WordPress, WooCommerce, Shoprenter, Unas, Ahrefs, Mailchimp, HubSpot, Salesforce, Canva</li>
-              <li><span className="font-semibold text-gray-200 print:text-black">Web & Automation:</span> HTML, CSS, JavaScript, Python, SQL</li>
+              <li><span className="font-semibold text-gray-200 print:text-black">{t('resumeTech1').split(':')[0]}:</span>{t('resumeTech1').split(':')[1]}</li>
+              <li><span className="font-semibold text-gray-200 print:text-black">{t('resumeTech2').split(':')[0]}:</span>{t('resumeTech2').split(':')[1]}</li>
+              <li><span className="font-semibold text-gray-200 print:text-black">{t('resumeTech3').split(':')[0]}:</span>{t('resumeTech3').split(':')[1]}</li>
             </ul>
           </section>
 

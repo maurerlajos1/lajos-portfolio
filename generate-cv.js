@@ -7,8 +7,9 @@ import puppeteer from 'puppeteer';
     const page = await browser.newPage();
     
     console.log("Navigating to Resume page...");
+    const port = process.argv[2] || '5173';
     // Wait until all network requests are finished so fonts/icons load perfectly
-    await page.goto('http://localhost:5173/resume', { waitUntil: 'networkidle0' });
+    await page.goto(`http://localhost:${port}/resume`, { waitUntil: 'networkidle0' });
     
     // Optional: Hide the action buttons before generating the PDF
     await page.evaluate(() => {
