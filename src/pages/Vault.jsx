@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useLanguage } from '../i18n';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -78,7 +78,7 @@ const getCleanDomain = (url) => {
   try {
     const hostname = new URL(url).hostname;
     return hostname.replace('www.', '');
-  } catch (e) {
+  } catch {
     return 'external link';
   }
 };
@@ -151,10 +151,25 @@ export default function Vault() {
     return groups;
   }, [filteredResources]);
 
-  React.useEffect(() => {
+  const resetResourceList = () => {
     setVisibleCount(24);
     setExpandedCategories({});
-  }, [activeCategory, activeType, searchQuery]);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+    resetResourceList();
+  };
+
+  const handleCategoryChange = (categoryId) => {
+    setActiveCategory(categoryId);
+    resetResourceList();
+  };
+
+  const handleTypeChange = (typeId) => {
+    setActiveType(typeId);
+    resetResourceList();
+  };
 
   const handleLoadMore = () => setVisibleCount(prev => prev + 24);
   const toggleCategory = (catId) => setExpandedCategories(prev => ({ 
@@ -197,7 +212,7 @@ export default function Vault() {
             <input
               type="text"
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
+              onChange={handleSearchChange}
               placeholder={t('vaultSearchPlaceholder')}
               className="w-full bg-black/25 border border-white/10 py-4 pr-4 pl-12 rounded-xl text-white outline-none text-base transition-all duration-200 focus:border-accent focus:ring-2 focus:ring-accent/30"
             />
@@ -213,7 +228,7 @@ export default function Vault() {
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => handleCategoryChange(cat.id)}
                   style={{
                     background: isActive ? cat.color : 'rgba(255,255,255,0.03)',
                     color: 'white',
@@ -249,7 +264,7 @@ export default function Vault() {
               return (
                 <button
                   key={type.id}
-                  onClick={() => setActiveType(type.id)}
+                  onClick={() => handleTypeChange(type.id)}
                   style={{
                     background: isActive ? 'var(--accent-color)' : 'rgba(255,255,255,0.03)',
                     color: 'white',

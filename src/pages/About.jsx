@@ -1,7 +1,6 @@
-import React from 'react';
 import { useLanguage } from '../i18n';
 import { motion } from 'framer-motion';
-import { BookOpen, Briefcase, GraduationCap, Layout, ArrowRight } from 'lucide-react';
+import { BookOpen, GraduationCap, Layout, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../i18n';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';

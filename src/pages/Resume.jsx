@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLanguage } from '../i18n';
 import { motion } from 'framer-motion';
 import { Printer, Mail, MapPin, Globe, Phone, ExternalLink, Download } from 'lucide-react';
@@ -6,31 +5,13 @@ import SEO from '../components/SEO';
 
 export default function Resume() {
   const { t, lang } = useLanguage();
+  const freelanceRole = t('roleFreelance');
+  const ppcRole = t('resumeRolePpcManager');
+  const onlineMarketingRole = t('resumeRoleOnlineMarketing');
 
   const handlePrint = () => {
     window.print();
   };
-
-  const certifications = [
-    "Google Ads Search Certification",
-    "Google Ads Display Certification",
-    "Google Ads Video Certification",
-    "Shopping Ads Certification",
-    "Google Analytics Individual Qualification",
-    "CXL: Intro to Data and Analytics",
-    "CXL: Statistics for A/B Testing",
-    "CXL: Intermediate Google Analytics",
-    "CXL: Building a Strong Growth Process",
-    "CXL: Forecasting and Analytics for Marketers",
-    "CXL: Creating a Conversion Research System",
-    "Grow Hungary with Google: Analytics Training"
-  ];
-
-  const metrics = [
-    { label: t('caseMetricSpend'), value: t('caseMetricSpendVal') },
-    { label: t('caseMetricCampaigns'), value: t('caseMetricCampaignsVal') },
-    { label: t('caseMetricProjects'), value: t('caseMetricProjectsVal') }
-  ];
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="resume-container pb-24">
@@ -85,58 +66,38 @@ export default function Resume() {
           {/* Professional Profile */}
           <section className="mb-10">
             <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeProfileTitle')}</h3>
-            <p className="text-gray-300 print:text-gray-800 leading-relaxed text-[1.05rem]">
-              {t('resumePositioning')}
-            </p>
+            <div className="text-gray-300 print:text-black leading-relaxed text-[1.05rem] space-y-4">
+              <p className="font-bold text-white print:text-black text-lg">{t('resumeProfileSubtitle')}</p>
+              <p className="font-medium text-gray-200 print:text-black">{t('resumeProfileDesc1')}</p>
+              <p className="print:text-black">{t('resumeProfileP1')}</p>
+              <p className="print:text-black">{t('resumeProfileP2')}</p>
+            </div>
           </section>
 
           {/* Core Competencies */}
           <section className="mb-10">
-            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeCoreSkills')}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6">
-              <div className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1">▸</span>
-                <span className="text-gray-300 print:text-gray-800">{t('skillCRO')}</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-emerald-500 mt-1">▸</span>
-                <span className="text-gray-300 print:text-gray-800">{t('skillResearch')}</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-purple-500 mt-1">▸</span>
-                <span className="text-gray-300 print:text-gray-800">{t('skillTracking')}</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-amber-500 mt-1">▸</span>
-                <span className="text-gray-300 print:text-gray-800">{t('skillPPC')}</span>
-              </div>
-            </div>
-          </section>
-
-          {/* Tools & Technical Skills */}
-          <section className="mb-10">
-            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeTechTitle')}</h3>
-            <ul className="text-gray-300 print:text-gray-800 list-disc list-inside space-y-2 text-sm">
-              <li><span className="font-semibold text-gray-200 print:text-black">{t('resumeTech1').split(':')[0]}:</span>{t('resumeTech1').split(':')[1]}</li>
-              <li><span className="font-semibold text-gray-200 print:text-black">{t('resumeTech2').split(':')[0]}:</span>{t('resumeTech2').split(':')[1]}</li>
-              <li><span className="font-semibold text-gray-200 print:text-black">{t('resumeTech3').split(':')[0]}:</span>{t('resumeTech3').split(':')[1]}</li>
+            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeCoreCompetenciesTitle')}</h3>
+            <ul className="text-gray-300 print:text-black list-disc pl-5 marker:text-gray-500 space-y-2 text-[1.05rem]">
+              <li><span className="font-bold text-gray-200 print:text-black">{lang === 'hu' ? 'Fő Kompetenciák:' : 'Core Competencies:'}</span> {t('resumeCoreCompetenciesVal')}</li>
+              <li><span className="font-bold text-gray-200 print:text-black">{t('resumeTechArsenalTitle')}:</span> {t('resumeTechArsenalVal')}</li>
+              <li><span className="font-bold text-gray-200 print:text-black">{t('resumePlatformsTitle')}:</span> {t('resumePlatformsVal')}</li>
             </ul>
           </section>
 
           {/* Professional Experience */}
           <section className="mb-10">
-            <h3 className="text-xl uppercase tracking-wider font-bold mb-6 print:text-black">{t('resumeExperience')}</h3>
+            <h3 className="text-xl uppercase tracking-wider font-bold mb-6 print:text-black">{t('resumeExperienceTitle')}</h3>
             
             {/* Freelance */}
             <div className="mb-8">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                <h4 className="text-lg font-bold print:text-black">Freelance</h4>
-                <span className="text-blue-500 print:text-gray-600 font-mono text-sm">{t('roleFreelance').match(/\(([^)]+)\)/)?.[1] || 'Aug 2025 - Present'}</span>
+                <h4 className="text-lg font-bold print:text-black">{freelanceRole.split(' | ')[0]}</h4>
+                <span className="text-blue-500 print:text-gray-600 font-mono text-sm">{freelanceRole.match(/\(([^)]+)\)/)?.[1] || 'Aug 2025 - Present'}</span>
               </div>
-              <div className="text-gray-400 print:text-gray-600 text-sm mb-4 uppercase tracking-wide">
-                {t('roleFreelance').split(' (')[0]}
+              <div className="text-gray-400 print:text-gray-700 text-sm mb-4 uppercase tracking-wide">
+                {freelanceRole.split(' | ')[1]?.split(' (')[0]}
               </div>
-              <ul className="text-gray-300 print:text-gray-800 pl-5 list-disc marker:text-gray-600 space-y-2">
+              <ul className="text-gray-300 print:text-black pl-5 list-disc marker:text-gray-500 space-y-2">
                 <li>{t('caseFreeL1')}</li>
                 <li>{t('caseFreeL2')}</li>
               </ul>
@@ -145,76 +106,70 @@ export default function Resume() {
             {/* Click Brains */}
             <div className="mb-8">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                <h4 className="text-lg font-bold print:text-black">Click Brains</h4>
-                <span className="text-blue-500 print:text-gray-600 font-mono text-sm">{t('rolePpcManager').match(/\(([^)]+)\)/)?.[1] || '2024 - 2025'}</span>
+                <h4 className="text-lg font-bold print:text-black">{ppcRole.split(' | ')[0]}</h4>
+                <span className="text-blue-500 print:text-gray-600 font-mono text-sm">{ppcRole.match(/\(([^)]+)\)/)?.[1] || '2024 - 2025'}</span>
               </div>
-              <div className="text-gray-400 print:text-gray-600 text-sm mb-4 uppercase tracking-wide">
-                {t('rolePpcManager').split(' (')[0]}
+              <div className="text-gray-400 print:text-gray-700 text-sm mb-4 uppercase tracking-wide">
+                {ppcRole.split(' | ')[1]?.split(' (')[0]}
               </div>
-              <ul className="text-gray-300 print:text-gray-800 pl-5 list-disc marker:text-gray-600 space-y-2">
-                <li>{t('caseClickL1')}</li>
-                <li>{t('caseClickL2')}</li>
-                <li>{t('caseClickL3')}</li>
+              <ul className="text-gray-300 print:text-black pl-5 list-disc marker:text-gray-500 space-y-2">
+                <li>{t('resumeCaseClickL1')}</li>
+                <li>{t('resumeCaseClickL2')}</li>
+                <li>{t('resumeCaseClickL3')}</li>
               </ul>
             </div>
 
             {/* Bproduction */}
             <div className="mb-6">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
-                <h4 className="text-lg font-bold print:text-black">Bproduction Agency</h4>
-                <span className="text-blue-500 print:text-gray-600 font-mono text-sm">{t('roleOnlineMarketing').match(/\(([^)]+)\)/)?.[1] || '2020 - 2024'}</span>
+                <h4 className="text-lg font-bold print:text-black">{onlineMarketingRole.split(' | ')[0]}</h4>
+                <span className="text-blue-500 print:text-gray-600 font-mono text-sm">{onlineMarketingRole.match(/\(([^)]+)\)/)?.[1] || '2020 - 2024'}</span>
               </div>
-              <div className="text-gray-400 print:text-gray-600 text-sm mb-4 uppercase tracking-wide">
-                {t('roleOnlineMarketing').split(' (')[0]}
+              <div className="text-gray-400 print:text-gray-700 text-sm mb-4 uppercase tracking-wide">
+                {onlineMarketingRole.split(' | ')[1]?.split(' (')[0]}
               </div>
-              <ul className="text-gray-300 print:text-gray-800 pl-5 list-disc marker:text-gray-600 space-y-2">
-                <li>{t('caseBprodL1')}</li>
-                <li>{t('caseBprodL2')}</li>
-                <li>{t('caseBprodL3')}</li>
-                <li>{t('caseBprodL4')}</li>
+              <ul className="text-gray-300 print:text-black pl-5 list-disc marker:text-gray-500 space-y-2">
+                <li>{t('resumeCaseBprodL1')}</li>
+                <li>{t('resumeCaseBprodL2')}</li>
+                <li>{t('resumeCaseBprodL3')}</li>
+                <li>{t('resumeCaseBprodL4')}</li>
               </ul>
             </div>
           </section>
 
-          {/* Metrics Highlights */}
+          {/* Proof of Performance */}
           <section className="mb-10">
-            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeMetrics')}</h3>
-            <div className="flex flex-wrap gap-4">
-              {metrics.map((m, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 print:bg-gray-100 print:border-gray-300 px-4 py-2 rounded-lg flex gap-2 items-baseline">
-                  <span className="font-bold print:text-black">{m.value}</span>
-                  <span className="text-sm text-gray-400 print:text-gray-600 uppercase tracking-wide">{m.label}</span>
-                </div>
-              ))}
-            </div>
+            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeProofTitle')}</h3>
+            <ul className="text-gray-300 print:text-black list-disc pl-5 marker:text-gray-500 space-y-2 text-[1.05rem]">
+              <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal1').split(' ')[0]}</span> {t('proofVal1').split(' ').slice(1).join(' ')}</li>
+              <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal2').split(' ')[0]}</span> {t('proofVal2').split(' ').slice(1).join(' ')}</li>
+              <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal3').split(' ')[0]}</span> {t('proofVal3').split(' ').slice(1).join(' ')}</li>
+            </ul>
           </section>
 
-          {/* Education & Certs */}
-          <section>
-            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeEducation')}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-6">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <span className="text-gray-500 print:text-gray-400 mt-1.5 text-xs">■</span>
-                  <span className="text-gray-300 print:text-gray-800 text-sm">{cert}</span>
-                </div>
-              ))}
-            </div>
+          {/* Education & Credentials */}
+          <section className="mb-10">
+            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeEduTitle')}</h3>
+            <ul className="text-gray-300 print:text-black list-disc pl-5 marker:text-gray-500 space-y-2 text-[1.05rem]">
+              <li>{t('edu1')}</li>
+              <li>{t('edu2')}</li>
+              <li>{t('edu3')}</li>
+            </ul>
           </section>
 
-          {/* Education */}
-          <section className="mt-10">
-            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">Education</h3>
-            <div className="flex flex-col gap-4">
-              <div className="text-gray-300 print:text-gray-800">
-                <span className="text-gray-500 print:text-gray-400 mr-2">■</span>
-                {t('edu1')}
-              </div>
-              <div className="text-gray-300 print:text-gray-800">
-                <span className="text-gray-500 print:text-gray-400 mr-2">■</span>
-                {t('edu2')}
-              </div>
-            </div>
+          {/* Let's Connect */}
+          <section className="pt-6 border-t border-white/10 print:border-black/20">
+            <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeLetConnectTitle')}</h3>
+            <p className="text-gray-300 print:text-black leading-relaxed text-[1.05rem] mb-4">
+              {t('resumeLetConnectText')}
+            </p>
+            <p className="text-white print:text-black font-bold text-[1.05rem]">
+              {lang === 'hu' ? 'Írjon még ma a ' : 'Email me today at '}
+              <a href={`mailto:${t('contactEmail')}`} className="text-blue-500 print:text-blue-700 hover:underline">{t('contactEmail')}</a>
+              {lang === 'hu' ? ' címre, vagy hívjon a ' : ' or call '}
+              <a href="tel:+36302685650" className="text-blue-500 print:text-blue-700 hover:underline">+36 30 268 5650</a>
+              {lang === 'hu' ? '-es számon egy interjú egyeztetéséhez.' : ' to schedule an interview.'}
+            </p>
           </section>
 
         </div>

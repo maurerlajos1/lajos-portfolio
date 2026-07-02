@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useLanguage } from '../i18n';
 import { Globe, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -7,10 +7,6 @@ export default function Navbar() {
   const { t, toggleLanguage } = useLanguage();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
 
   const getLinkClass = (path) => {
     const isActive = location.pathname === path;

@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 import mermaid from 'mermaid';
 import { getBlogPostById } from '../data/blogPosts';
 import { useLanguage } from '../i18n';
-import { Calendar, Tag, ArrowLeft } from 'lucide-react';
+import { Calendar, Tag, ArrowLeft, ArrowRight, Download } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Mermaid = ({ chart }) => {
@@ -31,7 +31,7 @@ const Mermaid = ({ chart }) => {
 
 export default function BlogPost() {
   const { id } = useParams();
-  const { lang } = useLanguage();
+  const { t, lang } = useLanguage();
   const post = getBlogPostById(id);
 
   useEffect(() => {
@@ -117,6 +117,24 @@ export default function BlogPost() {
         </ReactMarkdown>
       </div>
 
+      <section className="mt-12 border border-white/10 bg-white/5 rounded-2xl p-6 md:p-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">{t('blogCtaTitle')}</h2>
+        <p className="text-gray-400 max-w-2xl mx-auto mb-6">{t('blogCtaDesc')}</p>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Link to="/work" className="btn-primary w-full sm:w-auto">
+            <span>{t('blogCtaPrimary')}</span>
+            <ArrowRight size={18} />
+          </Link>
+          <a
+            href={lang === 'hu' ? "/Lajos_Maurer_CV_HU.pdf" : "/Lajos_Maurer_CV.pdf"}
+            download={lang === 'hu' ? "Lajos_Maurer_CV_HU.pdf" : "Lajos_Maurer_CV.pdf"}
+            className="btn-secondary w-full sm:w-auto"
+          >
+            <Download size={18} />
+            {t('blogCtaSecondary')}
+          </a>
+        </div>
+      </section>
 
     </motion.article>
   );

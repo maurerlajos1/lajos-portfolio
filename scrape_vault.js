@@ -8,7 +8,6 @@ const __dirname = path.dirname(__filename);
 
 const inputPath = path.join(__dirname, 'src', 'data', 'vaultData.json');
 const outputDir = path.join('C:', 'Users', 'Lajos', '.gemini', 'antigravity', 'brain', '85ff541f-84f8-41af-979b-591f40ca6d0d', 'scratch');
-const outputPath = path.join(outputDir, 'scrapedVaultData.json');
 
 const data = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
 

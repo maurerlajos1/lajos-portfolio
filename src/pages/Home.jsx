@@ -1,22 +1,17 @@
-import React from 'react';
 import { useLanguage } from '../i18n';
 import ForecasterTool from '../ForecasterTool';
-import { Globe, ShieldCheck, TrendingUp, BrainCircuit, Activity, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Globe, ShieldCheck, TrendingUp, BrainCircuit, Activity, AlertTriangle, ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const pageVariants = {
     initial: { opacity: 0, y: 20 },
     in: { opacity: 1, y: 0 },
     out: { opacity: 0, y: -20 }
-  };
-
-  const scrollToForecaster = () => {
-    document.getElementById('forecaster')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -37,13 +32,18 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 flex-wrap">
-            <Link to="/vault" className="btn-primary w-full md:w-auto max-w-[320px]">
+            <Link to="/work" className="btn-primary w-full md:w-auto max-w-[320px]">
               <span>{t('heroCtaVault')}</span>
               <ArrowRight size={18} />
             </Link>
-            <button onClick={scrollToForecaster} className="btn-secondary w-full md:w-auto max-w-[320px]">
+            <a
+              href={lang === 'hu' ? "/Lajos_Maurer_CV_HU.pdf" : "/Lajos_Maurer_CV.pdf"}
+              download={lang === 'hu' ? "Lajos_Maurer_CV_HU.pdf" : "Lajos_Maurer_CV.pdf"}
+              className="btn-secondary w-full md:w-auto max-w-[320px]"
+            >
+              <Download size={18} />
               {t('secondaryCta')}
-            </button>
+            </a>
           </div>
         </header>
 

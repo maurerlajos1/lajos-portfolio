@@ -1,16 +1,62 @@
-# React + Vite
+# Lajos Maurer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Lajos Maurer, focused on performance growth, CRO, paid acquisition, analytics, and conversion-focused case studies.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Production domain: https://maurerlajos.com
+- Deployment target: Vercel
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS 4
+- React Router
+- Framer Motion
+- React Helmet Async
+- React Markdown with Mermaid support
+- Recharts
 
-## Expanding the ESLint configuration
+## Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+The local dev server usually runs at:
+
+```text
+http://localhost:5173/
+```
+
+## Quality Checks
+
+```bash
+npm run lint
+npm run build
+```
+
+Both should pass before pushing changes.
+
+## Project Notes
+
+- Main app entry: `src/App.jsx`
+- Page components: `src/pages/`
+- Shared components: `src/components/`
+- Translation strings: `src/i18n.jsx`
+- Case-study content: `src/data/caseStudiesData.js`
+- Blog metadata/content imports: `src/data/blogPosts.js`
+- Vault database: `src/data/vaultData.json`
+- Public PDFs and images: `public/`
+
+The site is bilingual (`en` and `hu`) through the local language context in `src/i18n.jsx`.
+
+## Future Agent Guide
+
+For implementation conventions, recent decisions, QA notes, and gotchas, read:
+
+```text
+AGENTS.md
+```

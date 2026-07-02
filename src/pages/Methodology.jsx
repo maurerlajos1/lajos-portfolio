@@ -1,8 +1,8 @@
-import React from 'react';
 import { useLanguage } from '../i18n';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Activity, BrainCircuit, Database, Sparkles, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Methodology() {
   const { t } = useLanguage();
@@ -15,6 +15,7 @@ export default function Methodology() {
 
   return (
     <motion.div initial="initial" animate="in" exit="out" variants={pageVariants} transition={{ duration: 0.4 }}>
+      <SEO title={t('navMethodology') || 'Methodology'} description={t('methPageSub')} url="https://maurerlajos.com/methodology" />
       <div className="max-w-[1200px] mx-auto px-5 py-16 pb-24">
         
         <header className="mb-16 text-center">

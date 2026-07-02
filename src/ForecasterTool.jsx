@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLanguage } from './i18n';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { Briefcase, TrendingUp, BookOpen, Globe } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 const ForecasterTool = () => {
   const { t } = useLanguage();
@@ -11,8 +11,6 @@ const ForecasterTool = () => {
   const [spend, setSpend] = useState(10000);
 
   const revenue = traffic * (cvr / 100) * aov;
-  const conversions = traffic * (cvr / 100);
-  const cpa = spend / (conversions || 1);
   const roas = revenue / (spend || 1);
 
   const chartData = [
@@ -73,8 +71,8 @@ const ForecasterTool = () => {
               <strong className="text-2xl text-blue-500">{roas.toFixed(2)}x</strong>
             </div>
           </div>
-          <div className="flex-1 min-h-[200px]">
-            <ResponsiveContainer width="100%" height="100%">
+          <div className="h-[240px] md:h-[280px] min-w-0">
+            <ResponsiveContainer width="100%" height={260} minWidth={1} minHeight={1}>
               <BarChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" vertical={false} />
                 <XAxis dataKey="name" stroke="var(--color-text-secondary)" />
