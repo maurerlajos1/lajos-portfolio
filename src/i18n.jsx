@@ -226,6 +226,7 @@ const translations = {
     resumeCaseClickL5: "Optimized acquisition processes across multiple paid channels simultaneously.",
     resumeCaseBprodL5: "Optimized landing pages and campaign messaging to improve conversion rates.",
     resumeCaseBprodL6: "Ran continuous testing cycles to support more efficient campaign development.",
+    resumeCaseBprodL7: "Supported SEO projects: onsite SEO optimization, content calendar planning and keyword strategy.",
     
     contactEmail: "maurerlajos1@gmail.com",
 
@@ -454,6 +455,7 @@ const translations = {
     resumeCaseBprodL4: "Looker Studio dashboardok készítése vezetői és ügyféloldali riportoláshoz.",
     resumeCaseBprodL5: "Landing page-ek és kampányüzenetek optimalizálása a jobb konverziós arány érdekében.",
     resumeCaseBprodL6: "Folyamatos tesztelés és kampányfejlesztés a hatékonyabb akvizíció támogatására.",
+    resumeCaseBprodL7: "SEO projektek támogatása: onsite SEO optimalizálás, tartalom naptár készítése és kulcsszóstratégia.",
 
     resumeProofTitle: "EREDMÉNYEK",
     proofVal1: "100 millió+ Ft kezelt hirdetési költségkeret.",
