@@ -158,6 +158,7 @@ export default function Resume() {
                 {t('resumeCaseBprodL5') && <li>{t('resumeCaseBprodL5')}</li>}
                 {t('resumeCaseBprodL6') && <li>{t('resumeCaseBprodL6')}</li>}
                 {t('resumeCaseBprodL7') && <li>{t('resumeCaseBprodL7')}</li>}
+                {t('resumeCaseBprodL8') && <li>{t('resumeCaseBprodL8')}</li>}
               </ul>
             </div>
           </section>

@@ -227,6 +227,7 @@ const translations = {
     resumeCaseBprodL5: "Optimized landing pages and campaign messaging to improve conversion rates.",
     resumeCaseBprodL6: "Ran continuous testing cycles to support more efficient campaign development.",
     resumeCaseBprodL7: "Supported SEO projects: onsite SEO optimization, content calendar planning and keyword strategy.",
+    resumeCaseBprodL8: "Google Merchant Center feed optimization: product feed structure, data quality improvement and Shopping campaign setup.",
     
     contactEmail: "maurerlajos1@gmail.com",
 
@@ -456,6 +457,7 @@ const translations = {
     resumeCaseBprodL5: "Landing page-ek és kampányüzenetek optimalizálása a jobb konverziós arány érdekében.",
     resumeCaseBprodL6: "Folyamatos tesztelés és kampányfejlesztés a hatékonyabb akvizíció támogatására.",
     resumeCaseBprodL7: "SEO projektek támogatása: onsite SEO optimalizálás, tartalom naptár készítése és kulcsszóstratégia.",
+    resumeCaseBprodL8: "Google Merchant Center termékfeed optimalizálás: feed struktúra, termékadatok javítása és Shopping kampányok alapózása.",
 
     resumeProofTitle: "EREDMÉNYEK",
     proofVal1: "100 millió+ Ft kezelt hirdetési költségkeret.",
