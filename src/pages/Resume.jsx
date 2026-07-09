@@ -180,6 +180,8 @@ export default function Resume() {
                   <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal1').split(' ')[0]}</span> {t('proofVal1').split(' ').slice(1).join(' ')}</li>
                   <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal2').split(' ')[0]}</span> {t('proofVal2').split(' ').slice(1).join(' ')}</li>
                   <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal3').split(' ')[0]}</span> {t('proofVal3').split(' ').slice(1).join(' ')}</li>
+                  {t('proofVal4') && <li>{t('proofVal4')}</li>}
+                  {t('proofVal5') && <li>{t('proofVal5')}</li>}
                 </>
               )}
             </ul>
