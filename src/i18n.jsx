@@ -412,7 +412,7 @@ const translations = {
     resumeProfileSubtitle: "",
     resumeProfileDesc1: "",
     resumeProfileP1: "Performance és growth marketing szakember vagyok több mint 5 év tapasztalattal fizetett akvizíció, PPC kampánymenedzsment, konverzióoptimalizálás és marketinganalitika területén.",
-    resumeProfileP2: "Eddigi munkám során több mint 500 000 USD hirdetési költségkeretet kezeltem, és 100+ kampány skálázásában vettem részt Google Ads, Meta és TikTok platformokon.",
+    resumeProfileP2: "Eddigi munkám során több mint 100 millió Ft hirdetési költségkeretet kezeltem, és 100+ kampány skálázásában vettem részt Google Ads, Meta és TikTok platformokon.",
     resumeProfileP3: "Fő fókuszom a hirdetési költések hatékonyabbá tétele: nemcsak forgalmat szeretnék generálni, hanem mérhető üzleti eredményt, jobb konverziós arányt és átláthatóbb megtérülést. Munkám során a kampánystratégiát, a trackinget, a riportolást, a landing page-eket és a teljes akvizíciós folyamatot együtt vizsgálom, hogy a marketingrendszer valóban skálázható legyen.",
     resumeProfileP4: "Erős tapasztalatom van Google Ads, Meta Ads, TikTok Ads, GA4, GTM, Server-Side GTM, Looker Studio, CRO, A/B tesztelés és voice-of-customer kutatás területén. Különösen érdekelnek azok a projektek, ahol a performance marketing nem önálló csatornaként működik, hanem szorosan kapcsolódik az üzleti célokhoz, az analitikához és a növekedési stratégiához.",
 
