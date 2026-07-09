@@ -67,10 +67,12 @@ export default function Resume() {
           <section className="mb-10">
             <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeProfileTitle')}</h3>
             <div className="text-gray-300 print:text-black leading-relaxed text-[1.05rem] space-y-4">
-              <p className="font-bold text-white print:text-black text-lg">{t('resumeProfileSubtitle')}</p>
-              <p className="font-medium text-gray-200 print:text-black">{t('resumeProfileDesc1')}</p>
+              {t('resumeProfileSubtitle') && <p className="font-bold text-white print:text-black text-lg">{t('resumeProfileSubtitle')}</p>}
+              {t('resumeProfileDesc1') && <p className="font-medium text-gray-200 print:text-black">{t('resumeProfileDesc1')}</p>}
               <p className="print:text-black">{t('resumeProfileP1')}</p>
               <p className="print:text-black">{t('resumeProfileP2')}</p>
+              {t('resumeProfileP3') && <p className="print:text-black">{t('resumeProfileP3')}</p>}
+              {t('resumeProfileP4') && <p className="print:text-black">{t('resumeProfileP4')}</p>}
             </div>
           </section>
 
@@ -78,9 +80,14 @@ export default function Resume() {
           <section className="mb-10">
             <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeCoreCompetenciesTitle')}</h3>
             <ul className="text-gray-300 print:text-black list-disc pl-5 marker:text-gray-500 space-y-2 text-[1.05rem]">
-              <li><span className="font-bold text-gray-200 print:text-black">{lang === 'hu' ? 'Fő Kompetenciák:' : 'Core Competencies:'}</span> {t('resumeCoreCompetenciesVal')}</li>
+              <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency1Title')}:</span> {t('resumeCoreCompetenciesVal')}</li>
+              {t('resumeCompetency2Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency2Title')}:</span> {t('resumeCompetency2Val')}</li>}
+              {t('resumeCompetency3Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency3Title')}:</span> {t('resumeCompetency3Val')}</li>}
               <li><span className="font-bold text-gray-200 print:text-black">{t('resumeTechArsenalTitle')}:</span> {t('resumeTechArsenalVal')}</li>
               <li><span className="font-bold text-gray-200 print:text-black">{t('resumePlatformsTitle')}:</span> {t('resumePlatformsVal')}</li>
+              {t('resumeCompetency4Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency4Title')}:</span> {t('resumeCompetency4Val')}</li>}
+              {t('resumeCompetency7Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency7Title')}:</span> {t('resumeCompetency7Val')}</li>}
+              {t('resumeCompetency8Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency8Title')}:</span> {t('resumeCompetency8Val')}</li>}
             </ul>
           </section>
 
@@ -100,6 +107,9 @@ export default function Resume() {
               <ul className="text-gray-300 print:text-black pl-5 list-disc marker:text-gray-500 space-y-2">
                 <li>{t('caseFreeL1')}</li>
                 <li>{t('caseFreeL2')}</li>
+                {t('caseFreeL3') && <li>{t('caseFreeL3')}</li>}
+                {t('caseFreeL4') && <li>{t('caseFreeL4')}</li>}
+                {t('caseFreeL5') && <li>{t('caseFreeL5')}</li>}
               </ul>
             </div>
 
@@ -116,6 +126,8 @@ export default function Resume() {
                 <li>{t('resumeCaseClickL1')}</li>
                 <li>{t('resumeCaseClickL2')}</li>
                 <li>{t('resumeCaseClickL3')}</li>
+                {t('resumeCaseClickL4') && <li>{t('resumeCaseClickL4')}</li>}
+                {t('resumeCaseClickL5') && <li>{t('resumeCaseClickL5')}</li>}
               </ul>
             </div>
 
@@ -133,6 +145,8 @@ export default function Resume() {
                 <li>{t('resumeCaseBprodL2')}</li>
                 <li>{t('resumeCaseBprodL3')}</li>
                 <li>{t('resumeCaseBprodL4')}</li>
+                {t('resumeCaseBprodL5') && <li>{t('resumeCaseBprodL5')}</li>}
+                {t('resumeCaseBprodL6') && <li>{t('resumeCaseBprodL6')}</li>}
               </ul>
             </div>
           </section>
@@ -141,9 +155,21 @@ export default function Resume() {
           <section className="mb-10">
             <h3 className="text-xl uppercase tracking-wider font-bold mb-4 print:text-black">{t('resumeProofTitle')}</h3>
             <ul className="text-gray-300 print:text-black list-disc pl-5 marker:text-gray-500 space-y-2 text-[1.05rem]">
-              <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal1').split(' ')[0]}</span> {t('proofVal1').split(' ').slice(1).join(' ')}</li>
-              <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal2').split(' ')[0]}</span> {t('proofVal2').split(' ').slice(1).join(' ')}</li>
-              <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal3').split(' ')[0]}</span> {t('proofVal3').split(' ').slice(1).join(' ')}</li>
+              {lang === 'hu' ? (
+                <>
+                  {t('proofVal1') && <li>{t('proofVal1')}</li>}
+                  {t('proofVal2') && <li>{t('proofVal2')}</li>}
+                  {t('proofVal3') && <li>{t('proofVal3')}</li>}
+                  {t('proofVal4') && <li>{t('proofVal4')}</li>}
+                  {t('proofVal5') && <li>{t('proofVal5')}</li>}
+                </>
+              ) : (
+                <>
+                  <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal1').split(' ')[0]}</span> {t('proofVal1').split(' ').slice(1).join(' ')}</li>
+                  <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal2').split(' ')[0]}</span> {t('proofVal2').split(' ').slice(1).join(' ')}</li>
+                  <li><span className="font-bold text-gray-200 print:text-black">{t('proofVal3').split(' ')[0]}</span> {t('proofVal3').split(' ').slice(1).join(' ')}</li>
+                </>
+              )}
             </ul>
           </section>
 
@@ -164,11 +190,23 @@ export default function Resume() {
               {t('resumeLetConnectText')}
             </p>
             <p className="text-white print:text-black font-bold text-[1.05rem]">
-              {lang === 'hu' ? 'Írjon még ma a ' : 'Email me today at '}
-              <a href={`mailto:${t('contactEmail')}`} className="text-blue-500 print:text-blue-700 hover:underline">{t('contactEmail')}</a>
-              {lang === 'hu' ? ' címre, vagy hívjon a ' : ' or call '}
-              <a href="tel:+36302685650" className="text-blue-500 print:text-blue-700 hover:underline">+36 30 268 5650</a>
-              {lang === 'hu' ? '-es számon egy interjú egyeztetéséhez.' : ' to schedule an interview.'}
+              {lang === 'hu' ? (
+                <>
+                  <a href="mailto:maurerlajos1@gmail.com" className="text-blue-500 print:text-blue-700 hover:underline">maurerlajos1@gmail.com</a>
+                  {' · '}
+                  <a href="tel:+36302685650" className="text-blue-500 print:text-blue-700 hover:underline">+36 30 268 5650</a>
+                  {' · '}
+                  <a href="https://maurerlajos.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 print:text-blue-700 hover:underline">maurerlajos.com</a>
+                </>
+              ) : (
+                <>
+                  {'Email me today at '}
+                  <a href={`mailto:${t('contactEmail')}`} className="text-blue-500 print:text-blue-700 hover:underline">{t('contactEmail')}</a>
+                  {' or call '}
+                  <a href="tel:+36302685650" className="text-blue-500 print:text-blue-700 hover:underline">+36 30 268 5650</a>
+                  {' to schedule an interview.'}
+                </>
+              )}
             </p>
           </section>
 
