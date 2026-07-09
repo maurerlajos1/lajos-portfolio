@@ -41,27 +41,37 @@ export default function Resume() {
           
           {/* Header */}
           <header className="border-b border-white/10 print:border-black/20 pb-8 mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-2 print:text-black">Lajos Maurer</h1>
-            <h2 className="text-xl md:text-2xl text-blue-500 print:text-gray-600 mb-6 font-medium">
-              {t('rolePerformance')}
-            </h2>
-            
-            <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <span className="flex items-center gap-1.5"><MapPin size={16} /> Hungary</span>
-              <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
-                <Phone size={16} /> <a href="tel:+36302685650" className="no-underline text-inherit">+36 30 268 5650</a>
-              </span>
-              <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
-                <Mail size={16} /> <a href={`mailto:${t('contactEmail')}`} className="no-underline text-inherit">{t('contactEmail')}</a>
-              </span>
-              <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
-                <Globe size={16} /> <a href="https://linkedin.com/in/maurer-lajos-a46300126/" target="_blank" rel="noopener noreferrer" className="no-underline text-inherit">linkedin.com/in/maurer-lajos-a46300126/</a>
-              </span>
-              <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
-                <ExternalLink size={16} /> <a href="https://maurerlajos.com" target="_blank" rel="noopener noreferrer" className="no-underline text-inherit">maurerlajos.com</a>
-              </span>
+            <div className="flex items-start justify-between gap-6">
+              <div className="flex-1">
+                <h1 className="text-4xl md:text-5xl font-bold mb-2 print:text-black">Lajos Maurer</h1>
+                <h2 className="text-xl md:text-2xl text-blue-500 print:text-gray-600 mb-6 font-medium">
+                  {t('rolePerformance')}
+                </h2>
+                
+                <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+                  <span className="flex items-center gap-1.5"><MapPin size={16} /> Hungary</span>
+                  <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
+                    <Phone size={16} /> <a href="tel:+36302685650" className="no-underline text-inherit">+36 30 268 5650</a>
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
+                    <Mail size={16} /> <a href={`mailto:${t('contactEmail')}`} className="no-underline text-inherit">{t('contactEmail')}</a>
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
+                    <Globe size={16} /> <a href="https://linkedin.com/in/maurer-lajos-a46300126/" target="_blank" rel="noopener noreferrer" className="no-underline text-inherit">linkedin.com/in/maurer-lajos-a46300126/</a>
+                  </span>
+                  <span className="flex items-center gap-1.5 hover:text-white transition-colors text-inherit">
+                    <ExternalLink size={16} /> <a href="https://maurerlajos.com" target="_blank" rel="noopener noreferrer" className="no-underline text-inherit">maurerlajos.com</a>
+                  </span>
+                </div>
+              </div>
+              <img
+                src="/profile_pic.jpeg"
+                alt="Lajos Maurer"
+                className="w-28 h-28 rounded-full object-cover object-top flex-shrink-0 border-2 border-white/20 print:border-gray-300"
+              />
             </div>
           </header>
+
 
           {/* Professional Profile */}
           <section className="mb-10">
