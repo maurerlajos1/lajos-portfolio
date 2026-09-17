@@ -167,7 +167,7 @@ input[type=range]::-webkit-slider-runnable-track {
 @media print {
   @page {
     size: A4;
-    margin: 12mm 15mm;
+    margin: 8mm 12mm;
   }
   
   html, body, #root { 
@@ -188,7 +188,7 @@ input[type=range]::-webkit-slider-runnable-track {
   }
 
   /* Reset layout constraints for print */
-  .resume-container {
+  .resume-container, .resume-container > div {
     padding: 0 !important;
     margin: 0 !important;
     max-width: none !important;
@@ -207,28 +207,46 @@ input[type=range]::-webkit-slider-runnable-track {
   .text-gray-200, .text-white { color: #0f172a !important; }
   .border-white\/10 { border-color: #e2e8f0 !important; }
   
-  /* Preserve Accent Colors! Do not overwrite blue/emerald/purple */
-  
-  h1 { color: #0f172a !important; font-size: 32pt !important; margin-bottom: 8px !important; }
-  h2 { font-size: 16pt !important; margin-bottom: 16px !important; }
-  h3 { color: #0f172a !important; font-size: 14pt !important; margin-bottom: 12px !important; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
-  h4 { color: #0f172a !important; font-size: 12pt !important; }
-  
-  p, li, span, a { font-size: 10.5pt !important; line-height: 1.5 !important; }
-  
-  /* Layout adjustments */
-  section { 
-    page-break-inside: avoid;
-    margin-bottom: 24px !important;
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
   }
   
-  .grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
-  }
-  
-  .glass-panel > div {
+  header {
+    padding-bottom: 8px !important;
+    margin-bottom: 10px !important;
     break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  header img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  h1 { color: #0f172a !important; font-size: 22pt !important; margin-bottom: 3px !important; }
+  h2 { font-size: 12.5pt !important; margin-bottom: 6px !important; }
+  h3 { color: #0f172a !important; font-size: 11.5pt !important; margin-bottom: 6px !important; border-bottom: 1px solid #e2e8f0; padding-bottom: 2px; }
+  h4 { color: #0f172a !important; font-size: 10.5pt !important; }
+  
+  p, li, span, a { font-size: 9pt !important; line-height: 1.38 !important; }
+  
+  /* Spacing adjustments for print */
+  section { 
+    margin-bottom: 10px !important;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 4px !important;
+  }
+
+  .space-y-2 > * + * {
+    margin-top: 2px !important;
+  }
+  
+  /* Keep individual items and small sections together */
+  section > div, li {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }

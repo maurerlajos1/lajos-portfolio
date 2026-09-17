@@ -3,7 +3,11 @@ import puppeteer from 'puppeteer';
 (async () => {
   try {
     console.log("Launching headless browser...");
-    const browser = await puppeteer.launch({ headless: 'new' });
+    const executablePath = process.env.CHROME_PATH || 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+    const browser = await puppeteer.launch({ 
+      headless: 'new',
+      executablePath
+    });
     const page = await browser.newPage();
     
     console.log("Navigating to Resume page...");
