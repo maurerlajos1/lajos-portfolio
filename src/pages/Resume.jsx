@@ -92,7 +92,6 @@ export default function Resume() {
             <ul className="text-gray-300 print:text-black list-disc pl-5 marker:text-gray-500 space-y-2 text-[1.05rem]">
               <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency1Title')}:</span> {t('resumeCoreCompetenciesVal')}</li>
               {t('resumeCompetency2Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency2Title')}:</span> {t('resumeCompetency2Val')}</li>}
-              {t('resumeCompetency3Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency3Title')}:</span> {t('resumeCompetency3Val')}</li>}
               <li><span className="font-bold text-gray-200 print:text-black">{t('resumeTechArsenalTitle')}:</span> {t('resumeTechArsenalVal')}</li>
               <li><span className="font-bold text-gray-200 print:text-black">{t('resumePlatformsTitle')}:</span> {t('resumePlatformsVal')}</li>
               {t('resumeCompetency4Title') && <li><span className="font-bold text-gray-200 print:text-black">{t('resumeCompetency4Title')}:</span> {t('resumeCompetency4Val')}</li>}
