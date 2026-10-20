@@ -211,8 +211,6 @@ const translations = {
     resumeCompetency1Title: "Paid Acquisition & Performance Marketing",
     resumeCompetency2Title: "Google Ads & E-Commerce Focus",
     resumeCompetency2Val: "Google Merchant Center feed optimization, search intent mapping, brand/non-brand segmentation, Target CPA/ROAS bidding, Value-Based Bidding, custom Google Ads Scripts to filter underperforming inventory.",
-    resumeCompetency3Title: "Conversion Rate Optimization & Growth",
-    resumeCompetency3Val: "CRO, A/B testing, landing page and checkout funnel optimization, heuristic audits, user behavior analysis (Hotjar, GA4), eliminating friction throughout the customer buying journey.",
     resumeCompetency4Title: "CRM & Marketing Automation",
     resumeCompetency4Val: "HubSpot, Salesforce, lead scoring, CRM-driven feedback loops, customer acquisition funnel efficiency analysis.",
     resumeCompetency7Title: "Technical & Creative Tools",
